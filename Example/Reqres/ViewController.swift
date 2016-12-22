@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // create alamofire manger with right configuration
+        Reqres.setLogLevel(.verbose)
+
         let configuration = Reqres.defaultSessionConfiguration()
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         let alamofireManager = SessionManager(configuration: configuration)

@@ -35,6 +35,10 @@ open class Reqres: URLProtocol {
         return config
     }
 
+    open class func setLogLevel(_ logLevel: LogLevel) {
+        Reqres.logger.logLevel = logLevel
+    }
+
     // MARK: - NSURLProtocol
 
     open override class func canInit(with request: URLRequest) -> Bool {
